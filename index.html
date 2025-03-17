@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visual Crossing Weather API</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      body {
+        background-color: aqua;
+      }
+      #mapD {
+        height: 400px;
+      }
+      #mapFrame {
+        margin-left: 18%;
+        height: 300px;
+        width: 300px;
+      }
+      main {
+        display: flex;
+        flex-direction: column;
+        padding: 3px 5px;
+      }
+      h1 {
+        margin-left: 15%;
+        justify-content: center;
+        align-items: center;
+        color: blue;
+      }
+      #resultado {
+        background-color: rgb(136, 136, 243);
+        border: black solid transparent;
+        margin-right: 5%;
+        width: calc(100% - 10px);
+        padding: 10px;
+        overflow: hidden;
+      }
+      button {
+        background-color: aqua;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 12px;
+      }
+      .botones {
+        display: flex;
+        flex-direction: row;
+        margin-right: 5%;
+        padding-bottom: 2px;
+        padding: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>App del tiempo Con Visual Crossing</h1>
+
+    <main>
+      <div class="tiempo">
+        <input
+          type="text"
+          id="ubicacion"
+          placeholder="Introduce lugar para ver la prevision del tiempo"
+          autocomplete="off"
+        />
+        <ul id="sugerencias"></ul>
+      </div>
+      <div class="botones">
+        <button id="tiempoActual">Tiempo Para hoy</button>
+        <button id="diezDias">Previsión del Tiempo a diez días</button>
+        <button id="localizacion">Localización</button>
+      </div>
+      <div id="resultado"></div>
+      <div id="mapD" class="mapD">
+        <iframe id="mapFrame"></iframe>
+      </div>
+    </main>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js.js"></script>
+  </body>
+</html>
